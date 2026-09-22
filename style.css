@@ -1,0 +1,77 @@
+:root {
+    --sky-top: #4ec0ca;
+    --sky-bottom: #a8e6cf;
+    --pipe-green: #5ec049;
+    --pipe-dark: #3f9930;
+    --ground: #ded895;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    max-width: 100vw;
+    max-height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--sky-top), var(--sky-bottom));
+    touch-action: manipulation;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+#overlay h1 {
+    font-size: 2.2em;
+    margin: 0 0 10px;
+}
+
+#overlay p {
+    font-size: 1.1em;
+    margin: 4px 0;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    user-select: none;
+}
